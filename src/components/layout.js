@@ -6,15 +6,6 @@ import { Helmet } from "react-helmet"
 import Header from "./header/"
 import Footer from "./footer"
 
-// import image from "../images/company-hero-light.webp"
-
-// Importing the Bootstrap CSS
-import "bootstrap/dist/css/bootstrap.min.css"
-
-// Importing Materialize CSS & JS
-import "materialize-css/dist/css/materialize.min.css"
-import "materialize-css/dist/js/materialize.min.js"
-
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {

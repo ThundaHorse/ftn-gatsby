@@ -99,7 +99,7 @@ const IndexPage = () => (
       <Container>
         <Row className="mx-auto">
           <Col className="consultant-desc text-center m-2 p-4">
-            <img class="homepage-about-companies" src={adp} alt="ADP" />
+            <img className="homepage-about-companies" src={adp} alt="ADP" />
             <br />
             Experienced analytics professionals to educate you on data
             visualization, data science and data engineering. Automatic Data
@@ -107,7 +107,7 @@ const IndexPage = () => (
           </Col>
           <Col className="consultant-desc text-center m-2 p-4">
             <img
-              class="homepage-about-companies"
+              className="homepage-about-companies"
               src={salesForce}
               alt="salesforce"
             />
@@ -117,7 +117,7 @@ const IndexPage = () => (
             principles of Salesforce architecture. Salesforce
           </Col>
           <Col className="consultant-desc text-center m-2 p-4">
-            <img class="homepage-about-companies" src={delta} alt="delta" />
+            <img className="homepage-about-companies" src={delta} alt="delta" />
             <br />
             Strategy consultants focused in growing your knowledge and
             understanding of pricing and marketing strategies. Delta Airlines
@@ -133,7 +133,7 @@ const IndexPage = () => (
         <Col md="6" lg="6">
           <img
             src={howItWorks}
-            class="how-it-works-img mt-4"
+            className="how-it-works-img mt-4"
             alt="how-it-works-1"
           />
         </Col>
