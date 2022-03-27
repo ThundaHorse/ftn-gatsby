@@ -207,7 +207,7 @@ const BookNowCalendar = () => {
               },
             },
           }}
-          googleCalendarApiKey={process.env.GOOGLE_CLIENT_SECRET}
+          googleCalendarApiKey={process.env.GOOGLE_CALENDAR_API_KEY}
           headerToolbar={{
             left: "",
             center: "title",
