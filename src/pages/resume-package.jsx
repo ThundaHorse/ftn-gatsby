@@ -3,9 +3,19 @@ import { Container, Col, Row } from "react-bootstrap"
 import Layout from "../components/layout"
 import "../styles/pages/program.scss"
 
-const HelpMe = ({ location }) => {
-  const { state = {} } = location
-  const plan = state
+const HelpMe = () => {
+  const plan = {
+    title: "Resume Package",
+    pricing: "500",
+    validPeriod: "Valid for one month",
+    planIntro:
+      "Receive a FTN certified resume to land you the job of your dreams",
+    planDescription: [
+      "Understand and learn how to phrase and document key points needed for resumes for future knowledge",
+      "In-depth review of current resume",
+      "1 on 1 sessions with your personal Nerd to do an in depth review of your resume and roadmap a strategy for success on your desired role or industry",
+    ],
+  }
 
   const renderPlan = () => {
     return (

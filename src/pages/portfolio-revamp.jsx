@@ -3,9 +3,18 @@ import { Container, Col, Row } from "react-bootstrap"
 import Layout from "../components/layout"
 import "../styles/pages/program.scss"
 
-const HelpMe = ({ location }) => {
-  const { state = {} } = location
-  const plan = state
+const HelpMe = () => {
+  const plan = {
+    title: "Portfolio Revamp",
+    pricing: "800",
+    validPeriod: "Until completion",
+    planIntro: "Ready to seek new opportunities and career growth?",
+    planDescription: [
+      "Your portfolio defines your brand!",
+      "Have a design certified Nerd review and revamp your portfolio to highlight your key strengths and abilities.",
+      "They’ll partner with you to guide you along your journey and support you through your development process to ensure a high quality product.",
+    ],
+  }
 
   const renderPlan = () => {
     return (

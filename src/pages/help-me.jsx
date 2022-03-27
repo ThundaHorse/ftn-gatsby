@@ -3,9 +3,20 @@ import { Container, Col, Row } from "react-bootstrap"
 import Layout from "../components/layout"
 import "../styles/pages/program.scss"
 
-const HelpMe = ({ location }) => {
-  const { state = {} } = location
-  const plan = state
+const HelpMe = () => {
+  const plan = {
+    title: "Help me Package",
+    pricing: "50",
+    validPeriod: "Every month",
+    planIntro:
+      "Join our FTN community where you can grow with our Nerds and previous clients",
+    planDescription: [
+      "Assistance with navigating corporate bureaucracy",
+      "24/7 access to all Nerds to guide you through any escalations or issues you may face on a day to day basis",
+      "Guidance on key deliverables to ensure your quality of work reflects your professional brand",
+      "Assistance on basic technical needs",
+    ],
+  }
 
   const renderPlan = () => {
     return (

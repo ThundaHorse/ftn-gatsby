@@ -3,9 +3,19 @@ import { Container, Col, Row } from "react-bootstrap"
 import Layout from "../components/layout"
 import "../styles/pages/program.scss"
 
-const HelpMe = ({ location }) => {
-  const { state = {} } = location
-  const plan = state
+const HelpMe = () => {
+  const plan = {
+    title: "Mock Interview",
+    pricing: "149",
+    validPeriod: "Valid for one week",
+    planIntro: "Ready to ace your interview? This is for you",
+    planDescription: [
+      "Recorded live session from the interviewer",
+      "Feedback and suggestion on areas of focus",
+      "Receive insights to a successful interview response",
+      "Resume review",
+    ],
+  }
 
   const renderPlan = () => {
     return (

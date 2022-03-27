@@ -3,9 +3,19 @@ import { Container, Col, Row } from "react-bootstrap"
 import Layout from "../components/layout"
 import "../styles/pages/program.scss"
 
-const HelpMe = ({ location }) => {
-  const { state = {} } = location
-  const plan = state
+const HelpMe = () => {
+  const plan = {
+    title: "Find me a Job!",
+    pricing: "700",
+    validPeriod: "Valid for one month",
+    planIntro:
+      "A personal Nerd to be by your side through the start to end process of your job search",
+    planDescription: [
+      "1 on 1 sessions with your personal Nerd to do an in depth review of your resume and roadmap a strategy for success on your desired role or industry",
+      "Bi-weekly interview prep sessions to ensure your on top of all potential behavioral questions that could be asked ",
+      "Consultation on navigating offers and identify your best fit",
+    ],
+  }
 
   const renderPlan = () => {
     return (
