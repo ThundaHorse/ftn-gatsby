@@ -32,8 +32,9 @@ const BookNowCalendar = () => {
 
   const eventClicked = info => {
     info.jsEvent.preventDefault()
+    const isBrowser = () => typeof window !== "undefined"
 
-    if (info.event.url) {
+    if (isBrowser && info.event.url) {
       window.open(info.event.url)
     }
   }
