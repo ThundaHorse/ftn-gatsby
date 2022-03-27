@@ -1,0 +1,69 @@
+#plan-page {
+  padding-bottom: px2rem(48);
+  padding-top: px2rem(48);
+}
+
+.plan-title-and-price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: px2rem(48);
+}
+
+.plan-wrapper {
+  height: 100%;
+  margin-top: px2rem(48);
+}
+
+.plan-title {
+  font-weight: 700;
+}
+
+.plan-price {
+  font-size: px2rem(24);
+  margin: 0;
+  margin-right: px2rem(8);
+}
+
+.plan-valid-period {
+  font-size: px2rem(16);
+  font-style: italic;
+}
+
+.plan-intro {
+  font-weight: 600;
+}
+
+.plan-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: px2rem(32);
+}
+
+.plan-features {
+  li {
+    margin-bottom: px2rem(10);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #plan-page {
+    height: 100%;
+    padding: 0;
+  }
+
+  .plan-title-and-price {
+    padding-top: 0;
+  }
+
+  .plan-row {
+    flex-direction: column;
+  }
+
+  .plan-title {
+    font-size: px2rem(24);
+    font-weight: 600;
+  }
+}

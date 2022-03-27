@@ -1,0 +1,145 @@
+.about-us-intro-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-us-heading {
+  font-size: px2rem(32);
+}
+
+.about-us-sec {
+  box-shadow: px2rem(2) px2rem(2) px2rem(5) px2rem(5) rgb(112 144 176 / 20%);
+  height: px2rem(600);
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+
+  .about-sec-1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .about-sec-2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .about-us-intro-tools {
+    width: 50%;
+    height: auto;
+  }
+
+  .about-us-call-to-action {
+    font-size: px2rem(36);
+  }
+}
+
+.about-us-sub-sec {
+  align-items: center;
+  height: px2rem(500);
+  justify-content: center;
+
+  .about-us-call-to-action-sub {
+    font-size: px2rem(24);
+  }
+}
+
+.sub-1-image {
+  width: 80%;
+}
+
+.about-us-end {
+  align-items: center;
+  box-shadow: px2rem(2) px2rem(2) px2rem(5) px2rem(5) rgb(112 144 176 / 20%);
+  height: auto;
+  justify-content: center;
+
+  .about-us-call-end {
+    font-size: px2rem(24);
+    width: 50%;
+    float: right;
+  }
+
+  .end-image {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: px2rem(480)) {
+  #about-us-page {
+    margin-top: px2rem(24);
+  }
+
+  .about-us-heading {
+    font-size: px2rem(20);
+    left: px2rem(25);
+  }
+
+  .about-us-sec {
+    height: auto;
+    margin-bottom: px2rem(24);
+
+    .about-us-sec-row-1 {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .about-sec-1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: px2rem(12);
+    }
+
+    .about-sec-2 {
+      text-align: center;
+    }
+
+    .about-us-intro-tools {
+      width: 70%;
+      float: none;
+    }
+
+    .about-us-call-to-action {
+      font-size: px2rem(24);
+      width: 100%;
+    }
+  }
+
+  .about-us-sub-sec {
+    height: auto;
+
+    .about-us-call-to-action-sub {
+      font-size: px2rem(18);
+      width: 100%;
+    }
+  }
+
+  .about-us-end {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+    .about-us-end-sec-1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: px2rem(12);
+      text-align: center;
+    }
+
+    .about-us-end-sec-2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about-us-call-end {
+      font-size: px2rem(18);
+      float: none;
+    }
+  }
+}

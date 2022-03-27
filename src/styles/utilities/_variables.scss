@@ -1,0 +1,65 @@
+$white: #ffffff;
+$white-10: #fcfcfd;
+$purple-10: #f6f4ff;
+$purple-20: #e9e9f9;
+$purple-50: #6464df;
+$purple-primary: linear-gradient(92.76deg, #5d38f4 8.69%, #7332dd 91.57%);
+$purple-70: #2c267c;
+$blue: #235ee8;
+$blue-10: #ebf4ff;
+$teal: #74e7f0;
+$green: #a8ffd7;
+$yellow: #fcb003;
+$yellow-10: #fef5ee;
+$salmon: #fdaea1;
+$red: #c90048;
+$red-10: #feecec;
+$gray-10: #f8faf9;
+$gray-20: #e1e3ea;
+$gray-50: #8891aa;
+$gray-70: #4b5671;
+$midnight: #1b1c1e;
+$black: $midnight;
+
+// Font Colors
+$font-color--base: $midnight;
+$action-color: $purple-primary;
+$action-color--alt: $purple-20;
+$action-color--contrast: $white;
+
+// Background Colors
+$viewport-background-color: $white;
+
+// Sizes
+$font-size--base: 16px;
+
+:root {
+  // Typography
+  --font-family: "Montserrat", sans-serif;
+  --font-family--heading: var(--font-family);
+
+  --font-size--base: $font-size--base;
+
+  // Line heights
+  --line-height: 1.5;
+  --line-height--heading: 1.2;
+
+  // Other Sizes
+  --border-radius: 0.1875rem;
+  --spacing: 1.5rem;
+  --spacing--small: 0.75rem;
+  --spacing--large: 2rem;
+
+  // Borders
+  --border-width: 0.0625rem;
+  --border: var(--border-width) solid currentColor;
+
+  // Focus
+  --focus-outline-width: 0.1875rem;
+  --focus-outline-offset: 0.125rem;
+  --focus-outline: var(--focus-outline-width) solid #{$action-color};
+
+  // Animations
+  --duration: 150ms;
+  --timing: ease;
+}

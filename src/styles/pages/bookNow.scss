@@ -1,0 +1,83 @@
+#book-now {
+  padding-top: px2rem(36);
+  padding-bottom: px2rem(48);
+}
+
+.our-services-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .services-icon {
+    font-size: px2rem(40);
+    margin-left: px2rem(18);
+  }
+}
+
+.tab-content {
+  display: flex;
+  justify-content: center;
+}
+
+.service-descriptions {
+  margin-top: px2rem(24);
+}
+
+.service-image {
+  border-radius: px2rem(8);
+  box-shadow: px2rem(5) px2rem(5) px2rem(10) px2rem(10) rgb(112 144 176 / 20%);
+  object-fit: contain;
+  max-height: px2rem(390);
+  width: 100%;
+}
+
+.service-description-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+
+  .service-title {
+    font-size: px2rem(24);
+    letter-spacing: px2rem(-0.25);
+    line-height: px2rem(36);
+  }
+
+  .service-description {
+    font-size: px2rem(18);
+    letter-spacing: px2rem(-0.25);
+    line-height: px2rem(28);
+    margin-top: px2rem(24);
+  }
+
+  .service-cost {
+    margin-top: px2rem(24);
+
+    .service-rate {
+      font-weight: bold;
+      font-size: px2rem(18);
+    }
+
+    .service-time {
+      font-size: px2rem(14);
+    }
+  }
+
+  .book-service {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.service-extended-description-title {
+  font-weight: bold;
+  font-size: px2rem(32);
+}
+
+@media screen and (max-width: px2rem(480)) {
+  .tab-content {
+    flex-direction: row-reverse;
+  }
+}

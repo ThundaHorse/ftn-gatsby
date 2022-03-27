@@ -1,0 +1,86 @@
+@import "../utilities/variables";
+@import "../base/typography";
+
+#plan-and-pricing {
+  padding-top: px2rem(36);
+  padding-bottom: px2rem(48);
+}
+
+.plan-and-pricing-wrapper {
+  backdrop-filter: blur(px2rem(8));
+  height: 100%;
+}
+
+.plan-and-pricing-title {
+  font-size: px2rem(36);
+  font-weight: 700;
+}
+
+.plan-section {
+  border-radius: px2rem(8);
+  box-shadow: 0 8px 17px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  height: 50vh;
+  margin-bottom: px2rem(32) !important;
+}
+
+.plan-title {
+  font-weight: 700;
+}
+
+.plan-price {
+  font-size: px2rem(24);
+  margin: 0;
+  margin-right: px2rem(8);
+}
+
+.plan-valid-period {
+  font-size: px2rem(16);
+  font-style: italic;
+}
+
+.plan-intro {
+  font-weight: 600;
+}
+
+.plan-features {
+  li {
+    margin-bottom: px2rem(10);
+  }
+}
+
+@media screen and (max-width: px2rem(480)) {
+  #plan-and-pricing {
+    padding-top: px2rem(24);
+    padding-bottom: px2rem(48);
+  }
+
+  .plan-and-pricing-title {
+    font-size: px2rem(26);
+    font-weight: 600;
+  }
+
+  .packages-row {
+    flex-direction: column;
+    justify-content: baseline;
+  }
+
+  .plan-section {
+    height: 100%;
+
+    .plan-section-row {
+      flex-direction: column;
+    }
+
+    &:nth-child(2n) {
+      .plan-section-row {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .plan-section {
+    height: 100%;
+  }
+}
