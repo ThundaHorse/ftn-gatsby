@@ -9,6 +9,7 @@ import { Form, Modal, Button, Row, Col } from "react-bootstrap"
 import ApiCalendar from "react-google-calendar-api"
 import "../styles/pages/bookOnlineCalendar.scss"
 import Layout from "../components/layout"
+import { window } from "browser-monads"
 
 const BookNowCalendar = () => {
   const [showModal, setShowModal] = useState(false)
@@ -32,9 +33,8 @@ const BookNowCalendar = () => {
 
   const eventClicked = info => {
     info.jsEvent.preventDefault()
-    const isBrowser = () => typeof window !== "undefined"
 
-    if (isBrowser && info.event.url) {
+    if (info.event.url) {
       window.open(info.event.url)
     }
   }
