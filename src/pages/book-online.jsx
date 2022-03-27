@@ -1,17 +1,13 @@
-import FullCalendar from "@fullcalendar/react"
-import dayGridPlugin from "@fullcalendar/daygrid"
-import googleCalendarPlugin from "@fullcalendar/google-calendar"
-import interactionPlugin from "@fullcalendar/interaction"
-import React, { useState, useRef } from "react"
+import React, { useState } from "react"
 import { Select } from "react-materialize"
 import TimePicker from "react-bootstrap-time-picker"
 import { Form, Modal, Button, Row, Col } from "react-bootstrap"
 import ApiCalendar from "react-google-calendar-api"
 import "../styles/pages/bookOnlineCalendar.scss"
 import Layout from "../components/layout"
-import { window } from "browser-monads"
+import loadable from "@loadable/component"
 
-const isBrowser = typeof window !== "undefined"
+const FtnCalendar = loadable(() => import("../components/calendar"))
 
 const BookNowCalendar = () => {
   const [showModal, setShowModal] = useState(false)
@@ -29,51 +25,20 @@ const BookNowCalendar = () => {
     errors: "",
     dateStr: "",
   })
-  const [signedIn, setSignedIn] = useState(false)
   const [validated, setValidated] = useState(false)
-  const calendarRef = useRef(null)
-
-  const eventClicked = info => {
-    info.jsEvent.preventDefault()
-
-    if (isBrowser) {
-      if (info.event.url) {
-        window.open(info.event.url)
-      }
-    }
-  }
-
-  const handleDateClick = info => {
-    if (signedIn) {
-      setDayInfo({
-        ...dayInfo,
-        dateStr: info.dateStr,
-      })
-      setShowModal(true)
-    } else {
-      handleGoogleAuth()
-    }
-  }
-
-  const handleGoogleAuth = () => {
-    if (!signedIn) {
-      ApiCalendar.handleAuthClick()
-        .then(() => {
-          console.log("sign in succesful!")
-          setSignedIn(true)
-        })
-        .catch(e => {
-          console.error(`sign in failed ${e}`)
-        })
-    } else {
-      ApiCalendar.handleSignoutClick()
-      console.log("Signed out")
-      setSignedIn(false)
-    }
-  }
 
   const modalHandler = () => {
     setShowModal(false)
+  }
+
+  const calModalHandler = () => {
+    setShowModal(true)
+  }
+
+  const calDayInfoHandler = val => {
+    setDayInfo({
+      ...val,
+    })
   }
 
   const msToTime = s => {
@@ -194,38 +159,10 @@ const BookNowCalendar = () => {
   return (
     <Layout>
       <div className="container mt-4">
-        <FullCalendar
-          ref={calendarRef}
-          plugins={[dayGridPlugin, googleCalendarPlugin, interactionPlugin]}
-          initialView="dayGridMonth"
-          customButtons={{
-            customNext: {
-              text: ">",
-              click: function () {
-                calendarRef.current._calendarApi.next()
-              },
-            },
-            customPrev: {
-              text: "<",
-              click: function () {
-                calendarRef.current._calendarApi.prev()
-              },
-            },
-          }}
-          googleCalendarApiKey={process.env.GOOGLE_CALENDAR_API_KEY}
-          headerToolbar={{
-            left: "",
-            center: "title",
-            right: "customPrev customNext",
-          }}
-          events={{
-            googleCalendarId: process.env.CALENDAR_ID,
-            className: "gcal-event",
-          }}
-          lazyFetching={true}
-          selectAllow={true}
-          dateClick={handleDateClick}
-          eventClick={eventClicked}
+        <FtnCalendar
+          modalHandler={calModalHandler}
+          calDayInfoHandler={calDayInfoHandler}
+          dayInfo={dayInfo}
         />
 
         <br />

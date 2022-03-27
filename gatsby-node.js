@@ -24,6 +24,14 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
             test: /react-google-calendar-api/,
             use: loaders.null(),
           },
+          {
+            test: /@fullcalendar\/react/,
+            use: loaders.null(),
+          },
+          {
+            test: /@fullcalendar\/daygrid/,
+            use: loaders.null(),
+          },
         ],
       },
     })
