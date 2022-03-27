@@ -11,6 +11,8 @@ import "../styles/pages/bookOnlineCalendar.scss"
 import Layout from "../components/layout"
 import { window } from "browser-monads"
 
+const isBrowser = typeof window !== "undefined"
+
 const BookNowCalendar = () => {
   const [showModal, setShowModal] = useState(false)
   const [dayInfo, setDayInfo] = useState({
@@ -34,8 +36,10 @@ const BookNowCalendar = () => {
   const eventClicked = info => {
     info.jsEvent.preventDefault()
 
-    if (info.event.url) {
-      window.open(info.event.url)
+    if (isBrowser) {
+      if (info.event.url) {
+        window.open(info.event.url)
+      }
     }
   }
 
